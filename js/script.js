@@ -99,20 +99,5 @@ btnRoll.addEventListener('click', function () {
     //Switch to the next player
 });
 
-btnNew.addEventListener('click', function(){
-    diceEl.classList.add('hidden');
-    btnHold.disabled = false;
-    btnRoll.disabled = false;
-    score0El.textContent = 0;
-    score1El.textContent = 0;
-    document.querySelector(`.player--${activePlayer}`).classList.remove('player--winner');
-    // document.querySelector(`.player--0`).classList.add('player--active');
-    // document.querySelector(`.player--1`).classList.remove('player--active');
-    player1El.classList.remove('player--active');//player 2 //0
-    player0El.classList.add('player--active');//player 1 //1
-    document.getElementById(`current--${activePlayer}`).textContent = 0;
-    currentScore = 0;
-    scores[activePlayer] = 0;
-
-});
+btnNew.addEventListener('click', initialize);
 
